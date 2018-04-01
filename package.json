@@ -1,0 +1,22 @@
+{
+  "name": "face-detection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahadkc/face-detection-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahadkc/face-detection-js/issues"
+  },
+  "homepage": "https://github.com/rahadkc/face-detection-js#readme",
+  "dependencies": {
+    "dat.gui": "^0.7.1"
+  }
+}
