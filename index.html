@@ -14,8 +14,9 @@
 
   <style>
   video, canvas {
-    margin-left: 230px;
-    margin-top: 120px;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
     position: absolute;
   }
   button{
@@ -41,10 +42,12 @@
           <button onclick="setEmo()"><img src="assets/img/emo.png"/></button>
           <button onclick="setGlass()"><img src="assets/img/glass.png"/></button>
           <button onclick="setFlower()"><img src="assets/img/flower.png"/></button>
+          <button onclick="setMask()"><img src="assets/img/mask.png"/></button>
+          <button onclick="setBatman()"><img src="assets/img/batman.png"/></button>
       </div>
     <div class="demo-container">
-      <video id="video" width="420" height="340" preload autoplay loop muted></video>
-      <canvas id="canvas" width="420" height="340"></canvas>
+      <video id="video" width="450" height="360" preload autoplay loop muted></video>
+      <canvas id="canvas" width="450" height="360"></canvas>
     </div>
   </div>
 
@@ -64,6 +67,12 @@
     function setFlower(){
         img.src = 'assets/img/flower.png';
     }
+    function setMask(){
+        img.src = 'assets/img/mask.png';
+    }
+    function setBatman(){
+        img.src = 'assets/img/batman.png';
+    }
     window.onload = function() {
       var video = document.getElementById('video');
       var canvas = document.getElementById('canvas');
@@ -80,7 +89,7 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function(rect) {
-            context.drawImage(img, rect.x, rect.y, rect.width, rect.height);
+            context.drawImage(img, rect.x, rect.y-10, rect.width, rect.height);
 
         //   context.strokeStyle = '#a64ceb';
         //   context.strokeRect(rect.x, rect.y, rect.width, rect.height);
