@@ -51,7 +51,7 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function(rect) {
-            context.drawImage(img, rect.x, rect.y - 100, rect.width*1.1, rect.height*2);
+            context.drawImage(img, rect.x, rect.y + 100, rect.width*1.1, rect.height*2);
 
         //   context.strokeStyle = '#a64ceb';
         //   context.strokeRect(rect.x, rect.y, rect.width, rect.height);
